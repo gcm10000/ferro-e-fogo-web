@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === 'production' ? '/ferro-e-fogo-web/' : '/',
+  base: mode === 'production' ? './' : '/',
   plugins: [
     react(),
     mode === 'development' &&
