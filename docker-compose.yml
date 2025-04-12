@@ -3,7 +3,7 @@ version: '3.7'
 services:
   ferro-web:
     build:
-      context: ./ferro-e-fogo-web
+      context: /home/ubuntu/multi-sites/ferro-e-fogo-web
       dockerfile: Dockerfile
     image: ferro-web
     container_name: ferro-teste2
