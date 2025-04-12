@@ -4,7 +4,7 @@ services:
   ferro-web:
     build:
       context: /home/ubuntu/multi-sites/ferro-e-fogo-web
-      dockerfile: Dockerfile
+      dockerfile: /home/ubuntu/multi-sites/ferro-e-fogo-web/Dockerfile
     image: ferro-web
     container_name: ferro-teste2
     restart: unless-stopped
