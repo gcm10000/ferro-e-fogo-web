@@ -11,8 +11,8 @@ services:
     networks:
       - scripts_nginx-net
     environment:
-      - VIRTUAL_HOST=teste2.hubstock.com.br
-      - LETSENCRYPT_HOST=teste2.hubstock.com.br
+      - VIRTUAL_HOST=teste3.hubstock.com.br
+      - LETSENCRYPT_HOST=teste3.hubstock.com.br
       - LETSENCRYPT_EMAIL=gabrielc.machado@hotmail.com
     volumes:
       - ./dist:/usr/share/nginx/html
