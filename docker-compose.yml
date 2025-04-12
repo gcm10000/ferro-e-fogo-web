@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  ferro-web:
+    build:
+      context: ./ferro-e-fogo-web
+      dockerfile: Dockerfile
+    image: ferro-web
+    container_name: ferro-teste2
+    restart: unless-stopped
+    networks:
+      - scripts_nginx-net
+    environment:
+      - VIRTUAL_HOST=teste2.hubstock.com.br
+      - LETSENCRYPT_HOST=teste2.hubstock.com.br
+      - LETSENCRYPT_EMAIL=gabrielc.machado@hotmail.com
+    ports:
+      - "80:80"  # Expondo a porta 80 para o acesso HTTP
+    volumes:
+      - ./ferro-e-fogo-web/dist:/usr/share/nginx/html  # Certifique-se de que o build esteja em ./dist
+
+networks:
+  scripts_nginx-net:
+    external: true  # Usando a rede externa 'scripts_nginx-net', como já configurado
